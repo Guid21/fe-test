@@ -14,21 +14,18 @@ export default defineConfig(({ mode }) => {
         '@shared': path.resolve(__dirname, './src/shared'),
       },
     },
-    server: {
-      proxy: {
-        '/scanner': {
-          target: env.VITE_API_BASE,
-          changeOrigin: true,
-          secure: false,
-          rewrite: (path) => path.replace(/^\/scanner/, '/scanner'),
-        },
-        '/ws': {
-          target: env.VITE_WS_URL,
-          ws: true,
-          changeOrigin: true,
-          secure: false,
-        },
-      },
-    },
+    server:
+      mode === 'development'
+        ? {
+            proxy: {
+              '/scanner': {
+                target: env.VITE_API_BASE,
+                changeOrigin: true,
+                secure: false,
+                rewrite: (path) => path.replace(/^\/scanner/, '/scanner'),
+              },
+            },
+          }
+        : undefined,
   };
 });

@@ -26,6 +26,11 @@ There are also several other issues with subscriptions that I didn’t manage to
 
 ---
 
+## Development notes
+
+In development mode, there are no CORS issues because a proxy is configured in vite.config.ts.
+
+
 ## Test task description
 
 The original task description can be found here:  
