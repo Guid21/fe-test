@@ -12,7 +12,7 @@ export const dataScannerTableColumns = [
   columnHelper.accessor('tokenSymbol', {
     header: 'Token',
     size: 400,
-    filterFn: (row, columnId, filterValue) => {
+    filterFn: (row, _columnId, filterValue) => {
       console.log(filterValue, row.original.chain);
       if (!filterValue) {
         return true;

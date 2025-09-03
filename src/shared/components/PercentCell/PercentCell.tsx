@@ -1,5 +1,4 @@
 import { formatCompact } from '@/shared/features/scanner/utils/formatCompact';
-import React from 'react';
 
 type PercentCellProps = {
   value: number | string;

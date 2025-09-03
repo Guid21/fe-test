@@ -11,7 +11,8 @@ class WSManager {
   private manualClose = false;
   private connectionId = 0;
 
-  private log(...args: unknown[]) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private log(..._args: unknown[]) {
     // console.log('[WS]', ...args);
   }
 
